@@ -20,3 +20,27 @@ int main() {
     cout << count_al << endl;
 }
 // 64 位输出请用 printf("%lld")
+
+#include <string>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+int main() {
+    string s;
+    getline(cin, s);
+    while (true) {
+        int len = s.size();
+        if (len <= 8) {
+            s.insert(s.end(), 8-len, '0');
+            cout << s << endl;
+            if (!getline(cin, s)) break;
+        }
+        else {
+            cout << s.substr(0, 8) << endl;
+            s = s.substr(8, len-8);
+        }
+    }
+    
+    return 0;
+}
