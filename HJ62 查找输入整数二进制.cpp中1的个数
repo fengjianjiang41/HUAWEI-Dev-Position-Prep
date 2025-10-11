@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int solve(int n) {
+    if (n == 0) return 0;
+    int tmp = n % 2;
+    return solve(n / 2) + tmp;
+}
+
+int main() {
+    int a, b;
+    while (cin >> a >> b) { // 注意 while 处理多个 case
+        cout << solve(a) << endl;
+        cout << solve(b) << endl;
+    }
+}
+// 64 位输出请用 printf("%lld")
