@@ -27,8 +27,8 @@ int main() {
         if (pos[x][j] == '0') DFS(x, j);
     }
     int ans = 0;
-    for (int i = 1; i <= x; i++) {
-        for (int j = 1; j <= y; j++) {
+    for (int i = 2; i <= x-1; i++) {
+        for (int j = 2; j <= y-1; j++) {
             if (pos[i][j] == '0') ans++;
         }
     }
